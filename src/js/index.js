@@ -53,7 +53,7 @@ buttonElement.addEventListener('click', () => {
     const textAcort = textInput.substring(textInput.length - 3);
     const result = textAcort.padStart(7, "*");
 
-    if (Number(textInput) !== NaN && textInput.length === 9) {
+    if (!Number.isNaN(Number(textInput)) && textInput.length === 9) {
         msgElement.innerHTML = `tu numero ${result} es valido`;
     } else {
         msgElement.innerHTML = "error";
